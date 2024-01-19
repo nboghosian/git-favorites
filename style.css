@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: "Roboto", sans-serif;
+  --text-color: hsla(240, 9%, 89%, 1);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: #000;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+#app {
+  padding: 5rem 12rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search input {
+  background-color: #06181c;
+  height: 3.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0 0.8rem;
+  color: hsla(240, 6%, 51%, 1);
+  font-size: 1.4rem;
+  width: 38rem;
+}
+.search input:focus {
+  outline: 1px solid #4a808c;
+}
+
+.search button {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  background-color: #065e7c;
+  border-radius: 0.4rem;
+  height: 3.2rem;
+  border: none;
+  padding: 0 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+.container {
+  max-height: 300px; /* Defina a altura máxima desejada para a tabela */
+  overflow-y: overlay; /* Adiciona uma barra de rolagem vertical quando necessário */
+  /* Permite que a tabela tenha uma altura máxima */
+
+  border: 1px solid #4a808c;
+  margin-top: 7rem;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table thead {
+  background: #134f61;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.4rem;
+
+  border-radius: 0.4rem 0.4rem 0 0;
+  border: none;
+  position: sticky;
+  top: 0;
+}
+table th {
+  padding: 1.5rem;
+}
+
+table tr {
+  border-bottom: 1px solid #4a808c;
+  padding: 1.5rem;
+}
+table tr:first-child {
+  border-top: none;
+}
+table tr:last-child {
+  border-bottom: none;
+}
+
+table tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.5);
+}
+
+table tr:nth-child(even) {
+  background: #06181c;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: hsla(355, 91%, 66%, 1);
+}
+
+::-webkit-scrollbar {
+  width: .6rem; /* Largura da barra de rolagem */
+}
+
+/* Estilo para o indicador (thumb) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #4a808c; /* Cor do indicador */
+  border-radius: 10px; /* Borda arredondada do indicador */
+  height: 1.5rem;
+}
+
+/* Estilo para a trilha da barra de rolagem (track) */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Cor da trilha */
+}
+
+/* Estilo para o canto entre o indicador e a trilha */
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Cor de fundo do canto */
+  border-radius: 1rem;
+}
+
+.no-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  color: hsla(189, 4%, 32%, 1);
+  font-weight: 700;
+  line-height: 24.781px;
+  font-size: 3rem;
+
+  padding: 6rem 2rem;
+}
